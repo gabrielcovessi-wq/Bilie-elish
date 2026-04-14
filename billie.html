@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILLIE EILISH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --green: #00ff9d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--black);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 120px;
+            font-weight: 900;
+            letter-spacing: -5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 28px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 48px;
+            background: var(--green);
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+            background: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--green);
+        }
+
+        /* About */
+        .about {
+            background: #111;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        /* Music */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .song-card {
+            background: #1a1a1a;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 255, 157, 0.2);
+        }
+
+        .song-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .song-info {
+            padding: 20px;
+        }
+
+        .song-info h3 {
+            color: var(--green);
+        }
+
+        /* Gallery */
+        .gallery {
+            background: #0a0a0a;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 80px 5% 40px;
+            text-align: center;
+        }
+
+        .socials {
+            font-size: 32px;
+            margin: 40px 0;
+        }
+
+        .socials a {
+            color: white;
+            margin: 0 20px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--green);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 70px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">BILLIE</div>
+        <div class="nav-links">
+            <a href="#music">MÚSICAS</a>
+            <a href="#about">SOBRE</a>
+            <a href="#tour">TOUR</a>
+            <a href="#gallery">GALERIA</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>BILLIE EILISH</h1>
+            <p>HIT ME HARD AND SOFT • 2024</p>
+            <a href="#" class="btn">OUÇA AGORA</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2 class="section-title">A ARTISTA</h2>
+        <div class="about-grid">
+            <div>
+                <img src="https://picsum.photos/id/1016/800/900" alt="Billie Eilish" style="width:100%; border-radius:20px;">
+            </div>
+            <div class="about-text">
+                <h2>Billie Eilish Pirate Baird O'Connell</h2>
+                <p>Nascida em 18 de dezembro de 2001 em Los Angeles, Billie Eilish é uma das maiores estrelas da música mundial. Com apenas 17 anos ganhou 5 Grammys com seu álbum de estreia "When We All Fall Asleep, Where Do We Go?".</p>
+                <p>Conhecida por sua voz única, estilo ousado e letras profundas, Billie continua a quebrar recordes e a reinventar a indústria da música.</p>
+                <br>
+                <p><strong>Prêmios:</strong> 9 Grammys • 2 Oscars • 1 Emmy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music">
+        <h2 class="section-title">ÚLTIMOS LANÇAMENTOS</h2>
+        <div class="music-grid">
+            <div class="song-card">
+                <img src="https://picsum.photos/id/201/600/400" alt="BIRDS OF A FEATHER">
+                <div class="song-info">
+                    <h3>BIRDS OF A FEATHER</h3>
+                    <p>HIT ME HARD AND SOFT • 2024</p>
+                </div>
+            </div>
+            <div class="song-card">
+                <img src="https://picsum.photos/id/237/600/400" alt="LUNCH">
+                <div class="song-info">
+                    <h3>LUNCH</h3>
+                    <p>HIT ME HARD AND SOFT • 2024</p>
+                </div>
+            </div>
+            <div class="song-card">
+                <img src="https://picsum.photos/id/866/600/400" alt="WILDFLOWER">
+                <div class="song-info">
+                    <h3>WILDFLOWER</h3>
+                    <p>HIT ME HARD AND SOFT • 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour -->
+    <section id="tour" style="background:#111; text-align:center;">
+        <h2 class="section-title">HIT ME HARD AND SOFT TOUR</h2>
+        <p style="font-size:24px; margin-bottom:40px;">2025 - 2026</p>
+        <div style="max-width:800px; margin:0 auto;">
+            <p style="font-size:18px; margin:15px 0;"><strong>12.07.2025</strong> — São Paulo, Brasil • Allianz Parque</p>
+            <p style="font-size:18px; margin:15px 0;"><strong>15.07.2025</strong> — Rio de Janeiro, Brasil • Engenhão</p>
+        </div>
+        <a href="#" class="btn" style="margin-top:50px;">COMPRAR INGRESSOS</a>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">GALERIA</h2>
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/id/1015/800/600" alt="Billie">
+            <img src="https://picsum.photos/id/1027/800/600" alt="Billie">
+            <img src="https://picsum.photos/id/133/800/600" alt="Billie">
+            <img src="https://picsum.photos/id/201/800/600" alt="Billie">
+            <img src="https://picsum.photos/id/669/800/600" alt="Billie">
+            <img src="https://picsum.photos/id/866/800/600" alt="Billie">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo" style="font-size:42px; margin-bottom:20px;">BILLIE EILISH</div>
+        <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-spotify"></i></a>
+        </div>
+        <p>&copy; 2026 Billie Eilish Fan Site • Feito com ❤️</p>
+    </footer>
+
+</body>
+</html>
